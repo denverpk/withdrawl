@@ -4,7 +4,7 @@ import { BiconomyPaymaster } from '@biconomy/paymaster';
 export default async function handler(req, res) {
   try {
     const provider = new ethers.providers.JsonRpcProvider('https://mainnet.base.org'); // Use your RPC
-    const paymaster = new BiconomyPaymaster({ paymasterApiKey: 'YOUR_PAYMASTER_API_KEY' });
+    const paymaster = new BiconomyPaymaster({ paymasterApiKey: 'TbS1iirlF.a1bad543-0e96-44d9-bc55-6d9e833f88a4' });
     const balance = await paymaster.getPaymasterBalance(provider);
     res.status(200).json({ balance: ethers.utils.formatEther(balance) });
   } catch (error) {
